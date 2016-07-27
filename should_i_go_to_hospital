@@ -1,0 +1,49 @@
+# I am not a medical professional and this is not meant to be taken as medical advice.
+
+function should_i_go_to_hospital:
+    What kind of ailment do you have?
+        Too much drunk:
+            return should_i_go_to_hospital_for_alcohol_poisoning
+        Fever:
+            # source: https://consumer.healthday.com/encyclopedia/infectious-diseases-26/misc-infections-news-411/fever-in-adults-645156.html
+            What's your temperature?
+                106 or above:
+                    return Emergency room
+                103 or above:
+                    return Call Doctor
+            Do you have any of the following symptoms?
+                Difficulty breathing:
+                    return Hospital
+            Has it been longer than 3 days?
+                Yes: return Call Doctor
+            return Drink pleanty of fluids
+        A thing bit me:
+            return Call Doctor
+        Bleeding:
+            Is it squirting?
+                Yes:
+                    O:
+                    return Call 911
+            Can you stop the bleeding by pressing a clean pad up to it firmly for 15 minutes?
+                Yes:
+                    return You're fine
+            return Call Doctor
+            
+
+function should_i_go_to_hospital_for_alcohol_poisoning:
+    # source: http://awareawakealive.org/educate/know-the-signs
+    Do any of the following apply?
+        Person is unconscious:
+            return Call 911
+        Person is breathing less than 8 times a second:
+            return Call 911
+        Person has uncontrolled vomiting:
+            return Call 911
+        Person has paleness or blueness of skin:
+            return Call 911
+        Person is healthy but they're being really annoying:
+            return Call their mom
+        Person is sober:
+            return Why did you come here?
+    return Call 800-222-1222 (in the U.S.) to be connected with poison control.  They have more pseudocode to follow.
+    # All calls to poison control are confidential
