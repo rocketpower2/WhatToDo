@@ -1,0 +1,12 @@
+function should_i_shower:
+	What is the occasion?
+		Cute Girl:	return True :(
+		Funeral:		return False
+		Anything Else:
+			How long has it been since last shower?
+				3+ days:	return TRUE
+				>3 days:
+					What's your status?
+						Sticky:	return True
+						Sweaty:	return True
+						Anything Else:	return False
