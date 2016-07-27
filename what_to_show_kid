@@ -8,3 +8,8 @@ function what_to_show_kid:
 			Does he like cool stuff?
 				Yes: 	return Youtube Bug Fights
 				No: 	return The Olympics
+
+function should_i_feed_dirt_kid:
+	Do you want your kid to become more powerful?
+		Yes:	return True
+		No:	return False
