@@ -7,7 +7,7 @@ function should_i_tip:
 
     Where are you?
         In a resteraunt:
-            return should_i_tip_in_a_resteraunt
+            return should_i_tip_in_a_restaurant
         In a hotel:
             Is it really nice?
                 Yes:
@@ -42,7 +42,7 @@ function should_i_tip:
                     return False (optional)
         At the barber's:
             return 15-20%
-        In the bashroom:
+        In the bathroom:
             Are they in your stall?
                 Yes:
                     O:
@@ -57,15 +57,28 @@ function should_i_tip_in_a_resteraunt:
     is_it_self_bus?
         Yes: return False
     Does someone come around and fill your drink?
-        Yes: return 15-20%
+        Yes: return tip_based_on_service
     How do you get your food?
         They call out your name/number and you come to them:
             return No
         They give you a number on a stick to keep at your table:
             return No
         Someone remembered where you sit and brought your food to you:
-            return 15-20%
+            return tip_based_on_service
+    return False
 
+function tip_based_on_service:
+    How was the service?
+        Bad:
+            return 5-15%
+        Acceptable:
+            return 15-20%
+        Good
+            return 20-30%
+        Exceptional
+            return 30-50%
+    return 15-20%
+            
 function is_it_self_bus:
     Did they give you a plastic tray to put your food on?
         Yes: return Yes
