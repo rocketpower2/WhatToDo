@@ -1,0 +1,3 @@
+function what_to_show_kid:
+	girl:	return Catdog
+	boy:	return The Olympics
