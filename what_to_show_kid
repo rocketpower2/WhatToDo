@@ -1,3 +1,10 @@
 function what_to_show_kid:
-	girl:	return Catdog
-	boy:	return The Olympics
+	What is the gender?
+		Girl:	
+			What is her age?
+				21+:	return Catdog
+				<21:	return Baby Panda Sneezing
+		Boy:	
+			Does he like cool stuff?
+				Yes: 	return Youtube Bug Fights
+				No: 	return The Olympics
