@@ -1,0 +1,12 @@
+function hug_or_handshake:
+    What's the context?
+        Business:
+            return Handshake
+        Family:
+            What's their relation to you?
+                Creepy uncle:
+                    return Handshake
+                Anything else:
+                    return Hug
+        Anything else:
+            Panic

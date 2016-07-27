@@ -1,0 +1,76 @@
+function should_i_tip:
+    Are you in America?
+        Yes:
+            keep going
+        No:
+            return False
+
+    Where are you?
+        In a resteraunt:
+            return should_i_tip_in_a_resteraunt
+        In a hotel:
+            Is it really nice?
+                Yes:
+                    What service was rendered?
+                        They carried my stuff:
+                            return five to ten dollars depending on how heavy your stuff is
+                        They checked me in:
+                            return False
+                        They cleaned the room:
+                            Did you request a cleaning in addition to the standard daily cleaning?
+                                Yes:
+                                    return up to five dollars
+                                No:
+                                    return False
+                        Something else:
+                            return False (probably)
+                No:
+                    return False
+        At a carwash:
+            Did a human vacuum the inside?
+                Yes:
+                    return money but idk how much O:
+                No:
+                    return False
+        At home:
+            What service was rendered?
+                The mail was delivered:
+                    return False
+                They delivered a pizza:
+                    return minimum $2 per pizza or 15% of the bill
+                Home repair:
+                    return False (optional)
+        At the barber's:
+            return 15-20%
+        In the bashroom:
+            Are they in your stall?
+                Yes:
+                    O:
+                    return False
+                No:
+                    return $1 (not mandatory)
+        Somewhere else:
+            return False (probably)
+
+
+function should_i_tip_in_a_resteraunt:
+    is_it_self_bus?
+        Yes: return False
+    Does someone come around and fill your drink?
+        Yes: return 15-20%
+    How do you get your food?
+        They call out your name/number and you come to them:
+            return No
+        They give you a number on a stick to keep at your table:
+            return No
+        Someone remembered where you sit and brought your food to you:
+            return 15-20%
+
+function is_it_self_bus:
+    Did they give you a plastic tray to put your food on?
+        Yes: return Yes
+    Are there garbage cans with plates on top of them?
+        Yes: return Yes
+    Do you see other people bussing their treys?
+        Yes: return Yes
+    return No
