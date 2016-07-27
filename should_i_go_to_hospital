@@ -1,4 +1,6 @@
-# I am not a medical professional and this is not meant to be taken as medical advice.
+# DISCLAIMER: This is not a substitute for professional medical advice.  I am not a medical professional 
+# nor do I claim to be one.  This is first aid sourced from a variety of online sources and my vague memory
+# of the boyscout handbook.  
 
 function should_i_go_to_hospital:
     What kind of ailment do you have?
@@ -18,7 +20,8 @@ function should_i_go_to_hospital:
                 Yes: return Call Doctor
             return Drink pleanty of fluids
         A thing bit me:
-            return Call Doctor
+            return Call Doctor you could have rabies
+            # the shot for rabies is no longer bad it's a regular shot that goes in your shoulder
         Bleeding:
             Is it squirting?
                 Yes:
