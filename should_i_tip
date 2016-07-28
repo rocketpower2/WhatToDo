@@ -58,7 +58,15 @@ function should_i_tip:
 							Yes:
 								return False
 							No:
-								return like $2?
+								Is it a nice person?
+									Yes:
+										return like $2?
+									No:
+										Are they scary?
+											No:
+												return False
+											Yes:
+												return $10
         Somewhere else:
             return False (probably)
 
