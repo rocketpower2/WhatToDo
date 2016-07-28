@@ -13,3 +13,6 @@ function should_i_feed_dirt_kid:
 	Do you want your kid to become more powerful?
 		Yes:	return True
 		No:	return False
+
+function what_website_for_child:
+	return animegirls.neocities.org
