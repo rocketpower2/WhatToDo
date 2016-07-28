@@ -45,10 +45,20 @@ function should_i_tip:
         In the bathroom:
             Are they in your stall?
                 Yes:
-                    O:
+                    O: (uh-oh!) (yowza!)
                     return False
                 No:
                     return $1 (not mandatory)
+		  In a car:
+				Is it your car?
+					Yes:
+						return False
+					No:
+						Do you know this person?
+							Yes:
+								return False
+							No:
+								return like $2?
         Somewhere else:
             return False (probably)
 
